@@ -1,0 +1,6 @@
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\bin\Debug\MiniLessonMathClass.exe.config
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\bin\Debug\MiniLessonMathClass.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\bin\Debug\MiniLessonMathClass.pdb
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\obj\Debug\MiniLessonMathClass.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\obj\Debug\MiniLessonMathClass.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\MiniLessonMathClass\MiniLessonMathClass\obj\Debug\MiniLessonMathClass.pdb

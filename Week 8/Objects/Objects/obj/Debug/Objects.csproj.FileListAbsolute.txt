@@ -1,0 +1,6 @@
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\bin\Debug\Objects.exe.config
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\bin\Debug\Objects.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\bin\Debug\Objects.pdb
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\obj\Debug\Objects.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\obj\Debug\Objects.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\Objects\Objects\obj\Debug\Objects.pdb

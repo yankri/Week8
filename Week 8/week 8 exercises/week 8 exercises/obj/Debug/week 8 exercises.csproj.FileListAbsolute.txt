@@ -1,0 +1,6 @@
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\bin\Debug\week 8 exercises.exe.config
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\bin\Debug\week 8 exercises.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\bin\Debug\week 8 exercises.pdb
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\obj\Debug\week 8 exercises.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\obj\Debug\week 8 exercises.exe
+C:\Users\WeCanCodeIT\Documents\Week 8\week 8 exercises\week 8 exercises\obj\Debug\week 8 exercises.pdb
