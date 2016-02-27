@@ -2,9 +2,9 @@ Account Summary
 
 Account Holder: Sam Winchester
 
-Account Number: 731869
+Account Number: 337087
 
-Date/Time	Transaction Type	Amount	Current Balance
+Date/Time		Type	Amount	Current Balance
 
-2/25/2016 8:51:29 PM	 - 	45	55
+2/26/2016 9:52:04 PM	 + 	4.50	104.50
 

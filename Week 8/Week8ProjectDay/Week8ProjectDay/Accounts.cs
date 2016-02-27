@@ -9,8 +9,8 @@ namespace Week8ProjectDay
 {
     class Accounts
     {
-        uint acctNum;
-        decimal balance = 100;
+        private uint acctNum;
+        private decimal balance = 100;
 
         public uint AcctNum { get; set; }
         private Clients client { get; set; }
@@ -23,33 +23,33 @@ namespace Week8ProjectDay
             Balance = balance;
         }
 
-        public void GetBalance()
+        public void GetBalance() //writes the current balance to the console
         {
-            Console.WriteLine("Current Balance: $" + Balance);
+            Console.WriteLine("Current Balance: $" + decimal.Round(Balance, 2).ToString("0.00"));
             Console.ReadKey();
         }
 
-        public string GetShortAcctNum() //shortens the account num replaced by asterisks for privacy
-        {
-            string acctNumAsString = client.AcctNumber.ToString();
-            StringBuilder sb = new StringBuilder();
+        //public string GetShortAcctNum() //shortens the account num replaced by asterisks for privacy
+        //{
+        //    string acctNumAsString = client.AcctNumber.ToString();
+        //    StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i < acctNumAsString.Length; i++)
-            {
-                if (i < 3)
-                {
-                    sb.Append("*");
-                }
-                else
-                {
-                    sb.Append(acctNumAsString[i]);
-                }
-            }
+        //    for (int i = 0; i < acctNumAsString.Length; i++)
+        //    {
+        //        if (i < 3)
+        //        {
+        //            sb.Append("*");
+        //        }
+        //        else
+        //        {
+        //            sb.Append(acctNumAsString[i]);
+        //        }
+        //    }
 
-            return sb.ToString();
-        }
+        //    return sb.ToString();
+        //}
 
-        public string AcctFileHeader()
+        public string AcctFileHeader() //creates the header for the account summary file
         {
             StringBuilder sb = new StringBuilder();
 
@@ -59,12 +59,12 @@ namespace Week8ProjectDay
             sb.AppendLine();
             sb.AppendLine("Account Number: " + acctNum);
             sb.AppendLine();
-            sb.AppendLine("Date/Time\tTransaction Type\tAmount\tCurrent Balance");
+            sb.AppendLine("Date/Time\t\tType\tAmount\tCurrent Balance");
 
             return sb.ToString();
         }
 
-        public void Withdraw () 
+        public void Withdraw () //this method completes withdrawal transactions and adds the transaction to the list
         {
             decimal amount;
             while (true)
@@ -91,10 +91,10 @@ namespace Week8ProjectDay
             }
         }
 
-        public string WithdrawLineMaker (decimal amount, decimal totalToPrint)
+        public string WithdrawLineMaker (decimal amount, decimal totalToPrint) //creates a string containing the transaction information properly formatted for the file
         {
-            string amt = amount.ToString();
-            string total = totalToPrint.ToString();
+            string amt = amount.ToString("0.00");
+            string total = decimal.Round(totalToPrint, 2).ToString("0.00");
 
             StringBuilder sb = new StringBuilder();
 
@@ -112,23 +112,37 @@ namespace Week8ProjectDay
             return sb.ToString();
         }
 
-        public void Deposit() //add check to make sure it's a number
+        public void Deposit() //this method completes the deposit transaction, saving the information to a list. 
         {
-            Console.WriteLine("Enter the amount you want to deposit: ");
-            decimal amount = decimal.Parse(Console.ReadLine());
+            decimal amount;
 
-            Balance = Balance + amount;
-            decimal totalToPrint = Balance;
+            while (true)
+            { 
+                Console.WriteLine("Enter the amount you want to deposit: ");
+                string input = Console.ReadLine();
+                bool result = decimal.TryParse(input, out amount);
 
-            string file = DepositLineMaker(amount, totalToPrint);
+                if (result == true)
+                {
+                    Balance = Balance + amount;
+                    decimal totalToPrint = Balance;
 
-            client.TransactionHistory.Add(file);
+                    string file = DepositLineMaker(amount, totalToPrint);
+
+                    client.TransactionHistory.Add(file);
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
         }
 
-        public string DepositLineMaker(decimal amount, decimal totalToPrint)
+        public string DepositLineMaker(decimal amount, decimal totalToPrint) //creates a string that includes all the deposit transaction information
         {
-            string amt = amount.ToString();
-            string total = totalToPrint.ToString();
+            string amt = amount.ToString("0.00");
+            string total = decimal.Round(totalToPrint, 2).ToString("0.00");
 
             StringBuilder sb = new StringBuilder();
 
@@ -146,7 +160,7 @@ namespace Week8ProjectDay
             return sb.ToString();
         }
 
-        public void FileWriter (List<string> transactions)
+        public void FileWriter (List<string> transactions)  //writes the files at the end of the program
         {
             string header = AcctFileHeader();
 

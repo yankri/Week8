@@ -8,9 +8,9 @@ namespace Week8ProjectDay
 {
     class Clients
     {
-        string name = "Sam Winchester";
-        uint acctNumber = GetAcctNumber();
-        List<string> transactions = new List<string>();
+        private string name = "Sam Winchester";
+        private uint acctNumber = GetAcctNumber();
+        private List<string> transactions = new List<string>();
 
         public string AccountHolder { get; set; }
         public uint AcctNumber { get; set; }
@@ -23,7 +23,7 @@ namespace Week8ProjectDay
             TransactionHistory = transactions;
         }
 
-        public static uint GetAcctNumber ()
+        public static uint GetAcctNumber () //gets a random 6 digit number for the account number
         {
             Random random = new Random();
 
@@ -32,7 +32,7 @@ namespace Week8ProjectDay
             return acctNum;
         }
 
-        public void PrintClientInfo()
+        public void PrintClientInfo() //prints the client's info to the console
         {
             Console.WriteLine("Account Holder: " + this.name);
             Console.WriteLine("Account Number: " + this.acctNumber);

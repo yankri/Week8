@@ -9,7 +9,7 @@ namespace Week8ProjectDay
     class MainMenu
     {
 
-        public void PrintMenu()
+        public void PrintMenu() //this method prints the menu
         {
             Console.Title = "*******BANKING SYSTEM*******";
 
@@ -23,7 +23,7 @@ namespace Week8ProjectDay
             }
         }
 
-        public void Menu()
+        public void Menu() //this method runs the program
         {
             bool close = false;
             Clients client = new Clients();
@@ -70,7 +70,8 @@ namespace Week8ProjectDay
                     continue;
                 }
             }
-            account.FileWriter(client.TransactionHistory);
+
+            account.FileWriter(client.TransactionHistory); //file is written when the program closes
         }
     }
 }
